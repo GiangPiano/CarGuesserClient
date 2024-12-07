@@ -40,6 +40,9 @@ h1 {
 @media screen and (max-width: 1100px) {
     .container {
         margin: 10vh 5vw;
-        font-size: 300%;
+        font-size: 200%;
+    }
+    .file * {
+        font-size: 100%;
     }
 }
