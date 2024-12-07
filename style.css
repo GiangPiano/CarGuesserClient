@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(109, 109, 217);
+}
+
+.container .text {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+#image {
+    max-width: 80%;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+.container {
+    margin: 10vh 25vw;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
