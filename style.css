@@ -7,7 +7,9 @@
 html, body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(109, 109, 217);
-    background-image: 'https://images4.alphacoders.com/896/896230.jpg';
+    background-image: url('https://4kwallpapers.com/images/wallpapers/porsche-911-gt3-r-2560x2560-11539.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
