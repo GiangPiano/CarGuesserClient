@@ -3,24 +3,24 @@
     padding: 0;
 }
 
+
 html, body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(109, 109, 217);
+    background-image: 'https://images4.alphacoders.com/896/896230.jpg';
 }
 
-.container .text {
-    font-size: 20px;
-    text-align: center;
+h1 {
+    margin-top: 50px;
 }
-
 
 #image {
+    width = 600px;
     max-width: 80%;
     border-radius: 10px;
     display: block;
     margin: 10px auto;
 }
-
 
 .container {
     margin: 10vh 25vw;
@@ -30,7 +30,13 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     height: 100vh;
+    font-size: 20px;;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        margin: 10vh 5vw;
+    }
 }
