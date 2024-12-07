@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         try {
           // Fetch the data from the API
-          const response = await fetch('http://localhost:3000/ask', {
+          const response = await fetch('https://2d32-27-96-222-22.ngrok-free.app/inspect/http', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ url: imgsrc })
