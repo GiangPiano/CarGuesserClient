@@ -10,6 +10,7 @@ html, body {
     background-image: url('https://4kwallpapers.com/images/wallpapers/porsche-911-gt3-r-2560x2560-11539.jpg');
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 
 h1 {
