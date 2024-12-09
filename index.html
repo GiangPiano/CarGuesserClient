@@ -4,6 +4,7 @@
     <title>Car Guesser</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+    <script src="upload.js"></script>
 </head>
 <body>
     <div class="container">
@@ -11,14 +12,12 @@
             <h1>Car Guesser</h1>
             <p>Guess the car brand and model by the image.</p>
         </div>
-        <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-            <p>Drag one or more files to this <i>drop zone</i>.</p>
-        </div>
         <div class="file">
             <img id="image" src="https://placehold.co/600x400" alt="Image"></img>
             <form id="uploadForm" method="post" enctype="multipart/form-data">
-                <input type="text" name="file" placeholder="Image URL"></input>
-                <button type="submit" onclick="uploadImage()">Upload</button>
+                <input type="file" id="fileInput" accept="image/*">
+                <input type="text" name="file" placeholder="Image URL">
+                <button type="submit">Upload</button>
             </form>
         </div>
         <div class="result">

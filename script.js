@@ -41,25 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
             resultDiv.textContent = 'An error occurred.';
         }
     }
-
-
-
-    var file;
-    function dropHandler(ev) {
-        console.log("File(s) dropped");
-      
-        // Prevent default behavior (Prevent file from being opened)
-        ev.preventDefault();
-        if (ev.dataTransfer.items.kind === "file") {
-            file = ev.dataTransfer.items.getAsFile();
-            console.log(`... file.name = ${file.name}`);
-        }
-    }
-    
-    function dragOverHandler(ev) {
-        ev.preventDefault();
-        console.log("File(s) in drop zone");
-        // Prevent default behavior (Prevent file from being opened)
-    }
-});
-
+}
