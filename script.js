@@ -35,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(base64String);
             request(base64String);
         }
-        reader.readAsDataURL(file);
+        if (file) {
+            reader.readAsDataURL(file);
+        }
     });
 
     async function request(imgsrc) {
