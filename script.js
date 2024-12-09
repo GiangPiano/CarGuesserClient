@@ -1,5 +1,5 @@
-const form = document.getElementById('uploadForm');
-const resultDiv = document.getElementById('result');
+var form = document.getElementById('uploadForm');
+var resultDiv = document.getElementById('result');
 document.addEventListener('DOMContentLoaded', function() {
   var imgsrc = '';
 
