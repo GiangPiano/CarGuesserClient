@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('uploadForm');
+    var formURL = document.getElementById('uploadURL');
     var resultDiv = document.getElementById('result');
     var imgsrc = '';
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    form.addEventListener('submit', async function(e) {
+    formURL.addEventListener('submit', async function(e) {
         e.preventDefault();
         resultDiv.textContent = 'Loading...';
         request(imgsrc);

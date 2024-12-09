@@ -1,5 +1,5 @@
 async function uploadImage() {
-    var form = document.getElementById('uploadForm');
+    var form = document.getElementById('uploadFile');
     var resultDiv = document.getElementById('result');
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
