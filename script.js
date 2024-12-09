@@ -1,3 +1,5 @@
+const form = document.getElementById('uploadForm');
+const resultDiv = document.getElementById('result');
 document.addEventListener('DOMContentLoaded', function() {
   var imgsrc = '';
 
@@ -12,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const form = document.getElementById('uploadForm');
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         resultDiv.textContent = 'Loading...';
@@ -21,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function request(imgsrc) {
-    const resultDiv = document.getElementById('result');
     try {
         const response = await fetch('https://0e1c-119-18-0-102.ngrok-free.app/ask', {
             method: 'POST',
