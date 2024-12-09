@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const reader = new FileReader();
         resultDiv.textContent = 'Loading...';
-        reader.readAsDataURL(file);
+        // reader.readAsDataURL(file);
         reader.onload;
         const base64String = reader.result;
         request(base64String);
