@@ -17,7 +17,7 @@ async function uploadImage() {
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload;
-        const base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
+        const base64String = reader.result;
 
         try {
             console.log(imgsrc);
