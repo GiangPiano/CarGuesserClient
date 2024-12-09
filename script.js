@@ -1,7 +1,7 @@
-var form = document.getElementById('uploadForm');
-var resultDiv = document.getElementById('result');
 document.addEventListener('DOMContentLoaded', function() {
-  var imgsrc = '';
+    var form = document.getElementById('uploadForm');
+    var resultDiv = document.getElementById('result');
+    var imgsrc = '';
 
     window.addEventListener('load', function() {
         document.querySelector('input[type="text"]').addEventListener('change', function() {
