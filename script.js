@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var formFile = document.getElementById('uploadFile');
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
+    console.log(file);
     formFile.addEventListener('submit', async function(e){
         e.preventDefault();
         resultDiv.textContent = 'Loading...';
@@ -31,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         reader.onload = async function() {
             const base64String = reader.result;
-            // console.log(file)
             console.log(base64String);
             request(base64String);
         }
