@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var formURL = document.getElementById('uploadURL');
+    
     var resultDiv = document.getElementById('result');
     var imgsrc = '';
-
+    
     window.addEventListener('load', function() {
         document.querySelector('input[type="text"]').addEventListener('change', function() {
             var img = document.getElementById('image');
@@ -13,11 +13,25 @@ document.addEventListener('DOMContentLoaded', function() {
             imgsrc = img.src;
         });
     });
-
+    
+    var formURL = document.getElementById('uploadURL');
     formURL.addEventListener('submit', async function(e) {
         e.preventDefault();
         resultDiv.textContent = 'Loading...';
         request(imgsrc);
+    });
+
+    var formFile = document.getElementById('uploadFile');
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0];
+    formFile.addEventListener('submit', async function(e){
+        e.preventDefault();
+        const reader = new FileReader();
+        resultDiv.textContent = 'Loading...';
+        reader.readAsDataURL(file);
+        reader.onload;
+        const base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
+        request(base64String);
     });
 
     async function request(imgsrc) {
