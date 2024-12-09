@@ -10,7 +10,8 @@ async function uploadImage() {
     }
 
     const reader = new FileReader();
-    reader.onload = async function() {
+    reader.onload = async function(e) {
+        e.preventDefault();
         const base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
 
         try {
