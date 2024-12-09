@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = this.value;
             imgsrc = img.src;
         });
+        document.querySelector('input[type="file"]').addEventListener('change', function() {
+            var img = document.getElementById('image');
+            img.onload = () => {
+                URL.revokeObjectURL(img.src);  // no longer needed, free memory
+            }
+            img.src = URL.createObjectURL(this.files[0]);
+            imgsrc = img.src;
+        });
     });
     
     var formURL = document.getElementById('uploadURL');
