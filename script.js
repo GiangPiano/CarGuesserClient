@@ -3,16 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('load', function() {
         document.querySelector('input[type="text"]').addEventListener('change', function() {
-            // if (this.files && this.files[0]) {
-                var img = document.getElementById('image');
-                img.onload = () => {
-                    URL.revokeObjectURL(img.src);  // no longer needed, free memory
-                }
-    
-                img.src = this.value; // set src to blob url
-                imgsrc = img.src;
-            // }
-            // imgsrc = this.value;
+            var img = document.getElementById('image');
+            img.onload = () => {
+                URL.revokeObjectURL(img.src);  // no longer needed, free memory
+            }
+            img.src = this.value;
+            imgsrc = img.src;
         });
     });
     const form = document.getElementById('uploadForm');
@@ -22,12 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         resultDiv.textContent = 'Loading...';
 
-        // const formData = new FormData(form);
-        // console.log([...formData]);
-
         try {
-          // Fetch the data from the API
-          const response = await fetch('https://ebfe-27-96-222-22.ngrok-free.app/ask', {
+          const response = await fetch('https://0e1c-119-18-0-102.ngrok-free.app/ask', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ url: imgsrc })
@@ -35,12 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
           const data = await response.json(); // Parse JSON
-          // Access the field you want
+
           const messageContent = data.choices[0].message.content;
           console.log(data);
   
           // Update the HTML element
-          resultDiv.textContent = messageContent; // Set the content
+          resultDiv.textContent = messageContent; 
       } catch (error) {
           console.error('Error:', error);
           resultDiv.textContent = 'An error occurred.';
