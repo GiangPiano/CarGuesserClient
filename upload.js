@@ -1,6 +1,8 @@
-async function uploadImage(e) {
-    e.preventDefault();
-    var form = document.getElementById('uploadFile');
+
+
+
+async function uploadImage() {
+    var formFile = document.getElementById('uploadFile');
     var resultDiv = document.getElementById('result');
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
@@ -10,8 +12,10 @@ async function uploadImage(e) {
         return;
     }
 
-    const reader = new FileReader();
-    reader.onload = async function() {
+    formFile.addEventListener('submit', async function(e){
+        e.preventDefault();
+        const reader = new FileReader();
+        reader.onload;
         const base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
 
         try {
@@ -33,6 +37,6 @@ async function uploadImage(e) {
             console.error('Error:', error);
             resultDiv.textContent = 'An error occurred.';
         }
-    };
+    });
     reader.readAsDataURL(file);
 }
