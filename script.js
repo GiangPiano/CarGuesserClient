@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('uploadForm');
     const resultDiv = document.getElementById('result');
     var result = '1';
-    form.addEventListener('change', async function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         resultDiv.textContent = 'Loading...';
 
