@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var resultDiv = document.getElementById('result');
     var imgsrc = '';
+    var file = '';
     
     window.addEventListener('load', function() {
         document.querySelector('input[type="text"]').addEventListener('change', function() {
