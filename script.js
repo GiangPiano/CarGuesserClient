@@ -41,4 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
             resultDiv.textContent = 'An error occurred.';
         }
     }
-}
+});
