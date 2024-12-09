@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     var formFile = document.getElementById('uploadFile');
-    const fileInput = document.getElementById('fileInput');
+
     const file = fileInput.files[0];
     console.log(file);
     formFile.addEventListener('submit', async function(e){
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(base64String);
             request(base64String);
         }
-        if (file) {
-            reader.readAsDataURL(file);
+        if (imgsrc) {
+            reader.readAsDataURL(imgsrc);
         }
     });
 
