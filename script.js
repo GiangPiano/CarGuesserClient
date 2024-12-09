@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             img.src = URL.createObjectURL(this.files[0]);
             imgsrc = img.src;
+            var file = this.files[0];
         });
     });
     
@@ -29,22 +30,23 @@ document.addEventListener('DOMContentLoaded', function() {
         request(imgsrc);
     });
 
+    
     var formFile = document.getElementById('uploadFile');
-
-    const file = fileInput.files[0];
     console.log(file);
+    const reader = new FileReader();
+    reader.onload = async function() {
+        const base64String = reader.result;
+        console.log(base64String);
+        request(base64String);
+    }
+
     formFile.addEventListener('submit', async function(e){
         e.preventDefault();
         resultDiv.textContent = 'Loading...';
-        const reader = new FileReader();
         
-        reader.onload = async function() {
-            const base64String = reader.result;
-            console.log(base64String);
-            request(base64String);
-        }
-        if (imgsrc) {
-            reader.readAsDataURL(imgsrc);
+
+        if (file) {
+            reader.readAsDataURL(file);
         }
     });
 
