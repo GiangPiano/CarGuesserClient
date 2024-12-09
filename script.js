@@ -29,9 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const reader = new FileReader();
         resultDiv.textContent = 'Loading...';
         // reader.readAsDataURL(file);
-        reader.onload;
         const base64String = reader.result;
+        console.log(base64String);
         request(base64String);
+        reader.onload;
     });
 
     async function request(imgsrc) {
