@@ -15,6 +15,7 @@ async function uploadImage() {
     formFile.addEventListener('submit', async function(e){
         e.preventDefault();
         const reader = new FileReader();
+        reader.readAsDataURL(file);
         reader.onload;
         const base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
 
@@ -38,5 +39,4 @@ async function uploadImage() {
             resultDiv.textContent = 'An error occurred.';
         }
     });
-    reader.readAsDataURL(file);
 }
