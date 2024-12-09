@@ -1,4 +1,5 @@
-async function uploadImage() {
+async function uploadImage(e) {
+    e.preventDefault();
     var form = document.getElementById('uploadFile');
     var resultDiv = document.getElementById('result');
     const fileInput = document.getElementById('fileInput');
@@ -10,8 +11,7 @@ async function uploadImage() {
     }
 
     const reader = new FileReader();
-    reader.onload = async function(e) {
-        e.preventDefault();
+    reader.onload = async function() {
         const base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
 
         try {
