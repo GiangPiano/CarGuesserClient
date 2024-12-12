@@ -79,7 +79,7 @@ input{
     border-radius: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     #uploadFile{
         display:flex;
         flex-direction: column;
