@@ -2,20 +2,44 @@
     margin: 0;
     padding: 0;
 }
-
-
 html, body {
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(109, 109, 217);
+    font-family: 'Tahoma', 'Verdana', 'Helvetica', 'Rebellion Knight', 'Roboto', sans-serif;
+    background-color: black;
     background-image: url('https://4kwallpapers.com/images/wallpapers/porsche-911-gt3-r-2560x2560-11539.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
 
-h1 {
-    margin-top: 10%;
+    align-items: center;
+    height: 100vh;
+    color: black;
+    align-items: center;
 }
+
+#container {
+    margin: 5vh 25vw;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+
+    -webkit-box-shadow: 0px 12px 30px 5px rgba(127,162,179,1);
+-moz-box-shadow: 0px 12px 30px 5px rgba(127,162,179,1);
+box-shadow: 0px 12px 30px 5px rgba(127,162,179,1);
+}
+
+#text{margin: 10px;}
 
 #image {
     max-width: 80%;
@@ -24,30 +48,48 @@ h1 {
     margin: 10px auto;
 }
 
-.container {
-    margin: 5vh 25vw;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+#file{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: auto;
-    font-size: 20px;;
-    text-align: center;
 }
 
-.result {
+input{
+    border-radius: 5px;
+}
+
+button {
+    margin: 10x;
+    padding: 3px 6px;
+    border-radius: 5px;
+    border-width: 1.5px;
+    background-color: rgb(136, 163, 179);
+    color: white;
+    cursor: pointer;
+
+}
+button:hover{
+    transition: all 1.5s ease-in-out;
+    background-color: #314e57;
+}
+input{
+    padding: 3px;
+}
+#result {
     margin: 20px;
     border-radius: 10px;
 }
 
-@media screen and (max-width: 1100px) {
-    .container {
-        margin: 10vh 5vw 10vh;
-        font-size: 2rem;
+@media screen and (max-width: 600px) {
+    #uploadFile{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
-    .file * {
-        font-size: 1.5rem;
+    #uploadFile > input{
+        align-self: center;
+    }
+    #uploadFile > *{
+        align-self: center;
     }
 }
