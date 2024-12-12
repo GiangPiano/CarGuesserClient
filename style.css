@@ -10,20 +10,25 @@ html, body {
     background-attachment: fixed;
     background-position: center;
 }
-body{
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 20px;
+}
+
+body {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
 
     align-items: center;
-    height: 100vh;
     color: black;
     align-items: center;
 }
 
 #container {
-    margin: 5vh 25vw;
+    margin: 4vh 20vw;
     border-radius: 10px;
     background-color: rgb(243, 243, 243);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
@@ -31,6 +36,7 @@ body{
     flex-direction: column;
     align-items: center;
     height: auto;
+    min-height: 80vh;
     font-size: 20px;
     text-align: center;
 
@@ -42,54 +48,81 @@ body{
 #text{margin: 10px;}
 
 #image {
-    max-width: 80%;
-    border-radius: 10px;
     display: block;
     margin: 10px auto;
+    max-width: 80%;
+    border-radius: 10px;
 }
 
-#file{
+#file {
     display: flex;
     flex-direction: column;
 }
 
 input{
     border-radius: 5px;
+    padding: 3px;
+    width: 60%;
+    font-size: large;
 }
+input[type="file"] {
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+input::file-selector-button {
+    padding: 0.5em;
+    cursor: pointer;
+    width: 60%;
+    border: thin solid grey;
+    border-radius: 3px;
+  }
 
 button {
     margin: 10x;
     padding: 3px 6px;
+    width: 20%;
     border-radius: 5px;
     border-width: 1.5px;
     background-color: rgb(136, 163, 179);
     color: white;
     cursor: pointer;
-
+    font-size: large;
+    text-align: center;
+    transition: all 0.5s;
 }
+
 button:hover{
-    transition: all 1.5s ease-in-out;
     background-color: #314e57;
 }
-input{
-    padding: 3px;
-}
+
 #result {
     margin: 20px;
     border-radius: 10px;
 }
 
 @media screen and (max-width: 1000px) {
-    #uploadFile{
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+    #container {
+        margin: 5vh 2vw;
+        width: 96vw;
     }
-    #uploadFile > input{
-        align-self: center;
+    #container > * {
+        font-size: 150%;
     }
-    #uploadFile > *{
-        align-self: center;
+    input {
+        font-size: xx-large;
     }
+    input::file-selector-button {
+        font-size: x-large;
+      }
+    button {
+        margin: 10px;
+        font-size: xx-large;
+    }
+    img {
+        width: 100%;
+        /* max-width: 100%; */
+    }
+
 }
