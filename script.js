@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     async function request(imgsrc) {
         try {
             console.log(imgsrc);
-            const response = await fetch('https://4cfc-27-96-222-22.ngrok-free.app/ask', {
+            const response = await fetch('https://bce6-27-96-222-22.ngrok-free.app/ask', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url: imgsrc })
