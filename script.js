@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var imgsrc = '';
     var file = '';
 
+    // Update the image when the user selects a file/url
     window.addEventListener('load', function() {
         document.querySelector('input[type="text"]').addEventListener('change', function() {
             var img = document.getElementById('image');
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Submit the form
     var formURL = document.getElementById('uploadURL');
     formURL.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const reader = new FileReader();
             reader.onload = async function() {
                 const base64String = reader.result;
-                console.log(base64String);
+                console.log(file);
                 request(base64String);
             };
             reader.readAsDataURL(file);
