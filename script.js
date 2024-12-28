@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const reader = new FileReader();
             reader.onload = async function() {
                 const base64String = reader.result;
-                console.log(file);
+                console.log(base64String);
                 request(base64String);
             };
             reader.readAsDataURL(file);
