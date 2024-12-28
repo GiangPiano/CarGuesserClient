@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     async function request(imgsrc) {
         try {
             console.log(imgsrc);
-            const response = await fetch('https://ac2e-27-96-222-22.ngrok-free.app/', {
+            const response = await fetch('https://car-guesser-server.vercel.app/api/ask', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url: imgsrc })
